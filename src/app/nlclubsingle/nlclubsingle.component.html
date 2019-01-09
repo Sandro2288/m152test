@@ -1,0 +1,40 @@
+<div class="galleryContainer">
+	<mat-card class="card">
+		<mat-card-content>
+			<h2>Leitung</h2>
+			<div class="cardinhalt">
+				<p class="lefttext"><b>CEO:<br>Sportchef:<br>Coach:<br>Gründungsjahr:</b></p><p class="righttext">{{club.gf}}<br>{{club.sportchef}}<br>{{club.headcoach}}<br>{{club.gruendung}}</p>
+			</div>
+		</mat-card-content>
+	</mat-card>
+	<mat-card class="card">
+		<mat-card-content>
+			<h2>Stadion</h2>
+			<p>{{club.stadion}}</p>
+			<div class="cardinhalt">
+				<p class="lefttext"><b>Sitzplätze:<br>Stehplätze:<br>Total:</b></p><p class="righttext">{{club.sitzplaetze}}<br>{{club.stehplaetze}}<br></p>
+			</div>
+		</mat-card-content>
+	</mat-card>
+	<mat-card class="card">
+		<mat-card-content>
+			<h2>Meistertitel</h2>
+			<div class="titles">
+				<div *ngFor="let year of club.championshipTitle">{{year}}</div>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>
+<div class="bottompart">
+	<div class="leftbottom">
+		<p class="lefttext"><b>Adresse<br><br><br>E-Mail-Adresse</b></p><p class="righttext">{{club.adresse}}<br>{{club.plz}} {{club.ort}}<br><br>{{club.email}}</p>
+	</div>
+	<div class="rightbottom">
+		<div class="photo">
+			<img class="imgphoto" src="{{club.photo}}"> 
+		</div>
+		<div class="logo">
+			<img class="imglogo" src="{{club.logo}}"> 
+		</div>
+	</div>
+</div>

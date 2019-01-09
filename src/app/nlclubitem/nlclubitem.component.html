@@ -1,0 +1,7 @@
+	<mat-card class="card">
+		<mat-card-content>
+			<h2>{{club.name}}</h2>
+		</mat-card-content>
+		<img mat-card-image [src]=club.logo>
+		<a routerLink="/nlclub/{{club.id}}"><mat-icon><i class="material-icons">arrow_forward</i></mat-icon></a>
+	</mat-card>
